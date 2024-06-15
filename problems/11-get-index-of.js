@@ -7,14 +7,24 @@ this using a loop.
 */
 
 // Your code here 
+function getIndexOf(arr, targEl) {
+    let i = 0;
+    while (arr[i] !== targEl && i < arr.length) {
+        i++;
+    }
+    if (i === arr.length && arr[arr.length - 1] !== targEl) {
+        return -1;
+    } else {
+        return i;
+    }
+}
 
-
-// console.log(getIndexOf(['a', 'b', 'c', 'e'], 'c')); // 2
-// console.log(getIndexOf(['a', 'b', 'c', 'e'], 'e')); // 3
-// console.log(getIndexOf(['a', 'b', 'c', 'e'], 'z')); // -1
-// console.log(getIndexOf([43, -7, 11, 13, 43], 43));  // 0
-// console.log(getIndexOf([43, -7, 11, 13], 1));       // -1
-// console.log(getIndexOf([], 3));                     // -1
+console.log(getIndexOf(['a', 'b', 'c', 'e'], 'c')); // 2
+console.log(getIndexOf(['a', 'b', 'c', 'e'], 'e')); // 3
+console.log(getIndexOf(['a', 'b', 'c', 'e'], 'z')); // -1
+console.log(getIndexOf([43, -7, 11, 13, 43], 43));  // 0
+console.log(getIndexOf([43, -7, 11, 13], 1));       // -1
+console.log(getIndexOf([], 3));                     // -1
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = getIndexOf;

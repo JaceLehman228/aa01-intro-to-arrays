@@ -6,13 +6,19 @@ should return the difference between the first and last elements of the array.
 */
 
 // Your code here 
+function firstAndLast(numArr) {
+    if (numArr.length % 2 === 0) {
+        return numArr[0] + numArr[numArr.length - 1];
+    } else {
+        return numArr[0] - numArr[numArr.length - 1];
+    }
+}
 
-
-// console.log(firstAndLast([1, 2, 3, 4]));    // 5
-// console.log(firstAndLast([1, 2, 3, 4, 5])); // -4
-// console.log(firstAndLast([12, 5]));         // 17
-// console.log(firstAndLast([12]));            // 0
-// console.log(firstAndLast([7, 11, 3]));      // 4
+console.log(firstAndLast([1, 2, 3, 4]));    // 5
+console.log(firstAndLast([1, 2, 3, 4, 5])); // -4
+console.log(firstAndLast([12, 5]));         // 17
+console.log(firstAndLast([12]));            // 0
+console.log(firstAndLast([7, 11, 3]));      // 4
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = firstAndLast;
